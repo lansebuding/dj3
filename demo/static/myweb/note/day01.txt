@@ -1,0 +1,23 @@
+1.
+根目录下新增templates，要在settings中配置
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+2.
+根目录下新建静态文件，要在settings中配置
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+模板中在需要使用图片的标签上面添加声明
+
+{% load static %}
+
+引用路径写法
+
+{% static 'myweb/images/1.jpg' %}
+
+orm 创建数据库
+1.models目录下新建类
+2.python manage.py makemigrations
+3.manage.py migrate

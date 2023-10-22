@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}">
+    li
+</head>
+<body>
+    <h1>欢迎</h1>
+    <input type="text" value="新建" name="" id="" class="btn btn-primary">
+    <img src="{% static 'myweb/images/1.jpg' %}" alt="">
+    <div>{{name}}</div>
+    <div>{{list}}</div>
+    <div>{{list.0}}</div>
+    <div>{{list.1}}</div>
+    <div>{{list.2}}</div>
+    <div>
+        {% for item in list %}
+            <span>{{item}}</span>
+        {% endfor %}
+    </div>
+    <h1>------------</h1>
+<!--    <div>{{dic.name}}</div>-->
+    <ul>
+        {% for item in t %}
+            {% for item2 in item.values %}
+                <li>{{item2}}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    <div>
+        {% if name == "YJW" %}
+            <h1>lllllllll</h1>
+        {% elif name == "YJW2" %}
+            <h1>SSSSSSSSS</h1>
+        {% else %}
+            <h1>HHHHHHHHH</h1>
+        {% endif %}
+    </div>
+</body>
+</html>
